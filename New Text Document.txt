@@ -1,0 +1,17 @@
+select ProductID, (
+CASE
+ 
+  WHEN max(case when Price is null then 1 else 0 end ) = 0 THEN  max(Price)
+  WHEN max(price) = min(price) THEN  0
+ 
+  ELSE 0 
+END) as PriceMax , (
+CASE
+WHEN min(price) = max(price) THEN  0
+  WHEN min(case when Price is null then 1 else 0 end ) = 0 THEN  min(Price)
+  
+  ELSE 0 
+END) as PriceMin from  Price , Product group by ProductID 
+
+
+group là nhóm tên các m?c du?c d?nh nghia d?u tiên trong nhóm nh?ng cái k? bên ch? d? view theo cái d?u tiên
