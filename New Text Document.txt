@@ -14,4 +14,7 @@ WHEN min(price) = max(price) THEN  0
 END) as PriceMin from  Price , Product group by ProductID 
 
 
-group là nhóm tên các m?c du?c d?nh nghia d?u tiên trong nhóm nh?ng cái k? bên ch? d? view theo cái d?u tiên
+group lÃ  nhÃ³m tÃªn cÃ¡c m?c du?c d?nh nghia d?u tiÃªn trong nhÃ³m nh?ng cÃ¡i k? bÃªn ch? d? view theo cÃ¡i d?u tiÃªn
+
+
+https://www.mkyong.com/struts2/struts-2-and-json-example/ STRUTS RETURN JSON 
